@@ -117,6 +117,6 @@ terraform-sohag/
 ## 👨‍🎓 Author
 
 - **Muhammad Diab**
-- GitHub: [@mu7adiab](https://github.com/mu7adiab))
+- GitHub: [@mu7adiab]((https://github.com/mu7adiab))
 ---
 
