@@ -8,68 +8,71 @@
   <img src="https://img.shields.io/badge/Project-Sohag%20Infra-orange?style=flat-square" />
 </p>
 
-# 🚀 اسم المشروع
+# 🚀 Project Name
 
-🛠️ مبني باستخدام **Terraform** و **AWS**  
-💻 مشروع للبنية التحتية ككود  
-🔒 خاص بـ System Administrators
-
----
-
-## 📌 جدول المحتويات
-
-- [📖 مقدمة](#-مقدمة)
-- [📦 المميزات](#-المميزات)
-- [⚙️ المتطلبات](#️-المتطلبات)
-- [🚀 خطوات التشغيل](#-خطوات-التشغيل)
-- [📁 هيكل الملفات](#-هيكل-الملفات)
-- [📌 المتغيرات المهمة](#-المتغيرات-المهمة)
-- [🧠 أفكار مستقبلية](#-أفكار-مستقبلية)
-- [🧑‍💻 المؤلف](#-المؤلف)
-- [📄 الرخصة](#-الرخصة)
+🛠️ Built with **Terraform** and **AWS**  
+💻 Infrastructure as Code for Cloud Deployment  
+🔒 Designed for System Administrators
 
 ---
 
-## 📖 مقدمة
+## 📌 Table of Contents
 
-مشروع يستخدم Terraform لإنشاء بنية تحتية سحابية متكاملة على AWS. يشمل إنشاء VPC، Subnets، EC2، و Load Balancer وغيرها، مع تنظيم باستخدام Modules.
+- [📖 Overview](#-overview)
+- [📦 Features](#-features)
+- [⚙️ Requirements](#️-requirements)
+- [🚀 Getting Started](#-getting-started)
+- [📁 Project Structure](#-project-structure)
+- [🔧 Key Variables](#-key-variables)
+- [🧠 Future Improvements](#-future-improvements)
+- [🧑‍💻 Author](#-author)
 
----
-
-## 📦 المميزات
-
-- 🔹 بنية تحتية كاملة
-- 🔹 Subnets عامة وخاصة
-- 🔹 تنظيم باستخدام Modules
-- 🔹 ملف يحتوي على جميع الـ IPs
-- 🔹 ALB داخلي وخارجي
 
 ---
 
-## ⚙️ المتطلبات
+## 📖 Overview
 
-| الأداة        | الإصدار المقترح |
-|---------------|-----------------|
-| Terraform     | >= 1.5          |
-| AWS CLI       | >= 2.0          |
-| Linux أو macOS| مفضل            |
-| حساب AWS      | مفعل            |
+This project uses **Terraform** to provision a complete cloud infrastructure on **AWS**, including VPC, subnets, EC2 instances, public/private Load Balancers, and more. The architecture is fully modular for easy maintenance and scalability.
 
 ---
 
-## 🚀 خطوات التشغيل
+## 📦 Features
 
-```bash
-# استنساخ المشروع
-git clone https://github.com/username/project-name.git
-cd project-name
+- ✅ Fully automated infrastructure
+- ✅ Public & Private Subnets
+- ✅ Organized modular structure
+- ✅ Auto-generated IP addresses file
+- ✅ Internal and external ALBs
 
-# تهيئة Terraform
-terraform init
+---
 
-# مراجعة الخطة
-terraform plan
+## ⚙️ Requirements
 
-# تنفيذ الإنشاء
-terraform apply
+| Tool         | Recommended Version |
+|--------------|---------------------
 
+.
+├── main.tf
+├── variables.tf
+├── outputs.tf
+├── terraform.tfvars
+├── modules/
+│   ├── vpc/
+│   ├── ec2-public/
+│   ├── ec2-private-m/
+│   └── alb/
+└── all-ips.txt
+
+🔧 Key Variables
+Variable	Description
+vpc_cidr	CIDR block for the main VPC
+public_subnets	List of public subnets
+private_subnets	List of private subnets
+instance_type	Type of EC2 instances
+key_name	
+
+
+🧑‍💻 Author
+Muhammad Diab
+
+GitHub: @mu7adiab
