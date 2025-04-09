@@ -7,68 +7,69 @@
   <img src="https://img.shields.io/badge/AWS-Deployed-success?style=flat-square&logo=amazonaws" />
   <img src="https://img.shields.io/badge/Project-Sohag%20Infra-orange?style=flat-square" />
 </p>
-🔸 This Terraform project creates a full AWS infrastructure including:
 
-- ✅ VPC + Subnets (Public & Private)
-- ✅ Internet Gateway & NAT Gateway
-- ✅ Public EC2 instances with Apache (using remote-exec)
-- ✅ Private EC2 backend (No internet)
-- ✅ Public & Private ALBs
-- ✅ Remote state saved in **S3**
-- ✅ Auto-generated `all-ips.txt` file
-- ✅ Data source for latest Amazon Linux 2023 AMI
+# 🚀 اسم المشروع
 
-## 📁 Project Structure terraform/
-│
-├── main.tf
-├── backend.tf
-├── variables.tf
-├── outputs.tf
-├── README.md
-├── all-ips.txt
-│
-└── modules/
-    ├── vpc-m/
-    ├── subnet-m/
-    ├── sg-m/
-    ├── nat-gw-m/
-    ├── ec2-public-m/
-    ├── ec2-private-m/
-    ├── alb-public-m/
-    └── alb-private-m/
+🛠️ مبني باستخدام **Terraform** و **AWS**  
+💻 مشروع للبنية التحتية ككود  
+🔒 خاص بـ System Administrators
 
-📦 Requirements
-Terraform >= 1.7.5
+---
 
-AWS CLI installed and configured
-AWS credentials with full access (for testing in Learner Lab)
+## 📌 جدول المحتويات
 
-🧾 Outputs
-A file named all-ips.txt will be generated automatically with the public IPs of the EC2 instances in this format:
-cpp
-Copy
-Edit
-public-ip1 3.90.x.x
-public-ip2 18.210.x.x
+- [📖 مقدمة](#-مقدمة)
+- [📦 المميزات](#-المميزات)
+- [⚙️ المتطلبات](#️-المتطلبات)
+- [🚀 خطوات التشغيل](#-خطوات-التشغيل)
+- [📁 هيكل الملفات](#-هيكل-الملفات)
+- [📌 المتغيرات المهمة](#-المتغيرات-المهمة)
+- [🧠 أفكار مستقبلية](#-أفكار-مستقبلية)
+- [🧑‍💻 المؤلف](#-المؤلف)
+- [📄 الرخصة](#-الرخصة)
 
-📡 EC2 Public Output Example
-Each public EC2 instance installs Apache and serves this HTML:
-rust
-Copy
-Edit
-Hi, I'M Muhammad Diab... EC2 Public 1 is Working
+---
 
-📌 How to Use
-Clone the repo
-Create your keyy.pem key and upload it
-Run:
-bash
-Copy
-Edit
+## 📖 مقدمة
+
+مشروع يستخدم Terraform لإنشاء بنية تحتية سحابية متكاملة على AWS. يشمل إنشاء VPC، Subnets، EC2، و Load Balancer وغيرها، مع تنظيم باستخدام Modules.
+
+---
+
+## 📦 المميزات
+
+- 🔹 بنية تحتية كاملة
+- 🔹 Subnets عامة وخاصة
+- 🔹 تنظيم باستخدام Modules
+- 🔹 ملف يحتوي على جميع الـ IPs
+- 🔹 ALB داخلي وخارجي
+
+---
+
+## ⚙️ المتطلبات
+
+| الأداة        | الإصدار المقترح |
+|---------------|-----------------|
+| Terraform     | >= 1.5          |
+| AWS CLI       | >= 2.0          |
+| Linux أو macOS| مفضل            |
+| حساب AWS      | مفعل            |
+
+---
+
+## 🚀 خطوات التشغيل
+
+```bash
+# استنساخ المشروع
+git clone https://github.com/username/project-name.git
+cd project-name
+
+# تهيئة Terraform
 terraform init
+
+# مراجعة الخطة
+terraform plan
+
+# تنفيذ الإنشاء
 terraform apply
 
-
-👨‍💻 Author
-Muhammad Diab
-Track: System Administration @ ITI – Sohag
