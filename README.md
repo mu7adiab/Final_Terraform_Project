@@ -50,7 +50,7 @@ This project uses **Terraform** to provision a complete cloud infrastructure on 
 |--------------|---------------------|
 | Terraform    | >= 1.5              |
 | AWS CLI      | >= 2.0              |
-| Linux/macOS  | Preferred           |
+| Linux        | Preferred           |
 | AWS Account  | Required            |
 
 ---
@@ -59,8 +59,8 @@ This project uses **Terraform** to provision a complete cloud infrastructure on 
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-username/project-name.git
-cd project-name
+git clone https://github.com/mu7adiab/Final_Terraform_Project.git
+cd Final_Terraform_Project
 
 # 2. Initialize Terraform
 terraform init
@@ -78,16 +78,25 @@ terraform apply
 
 ```bash
 .
+terraform-sohag/
+│
 ├── main.tf
+├── backend.tf
 ├── variables.tf
 ├── outputs.tf
-├── terraform.tfvars
-├── modules/
-│   ├── vpc/
-│   ├── ec2-public/
-│   ├── ec2-private-m/
-│   └── alb/
-└── all-ips.txt
+├── README.md
+├── all-ips.txt
+│
+└── modules/
+    ├── vpc-m/
+    ├── subnet-m/
+    ├── sg-m/
+    ├── igw-m/
+    ├── ec2-public-m/
+    ├── ec2-private-m/
+    ├── alb-public-m/
+    └── alb-private-m/
+    ├── networking-m/
 ```
 
 ---
