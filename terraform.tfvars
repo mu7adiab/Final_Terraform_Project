@@ -1,0 +1,1 @@
+private_key_path = "/home/mdiab/final_project_tf/keyy.pem"

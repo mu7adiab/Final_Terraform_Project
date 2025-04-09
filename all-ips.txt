@@ -1,0 +1,8 @@
+public-ip2 34.201.30.167
+public-ip1 54.208.122.106
+public-ip2 44.203.216.205
+public-ip2 3.236.201.97
+public-ip2 44.193.12.42
+public-ip1 54.164.159.202
+public-ip2 18.234.160.67
+public-ip1 3.82.14.255
