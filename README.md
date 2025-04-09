@@ -18,7 +18,7 @@
 - ✅ Auto-generated `all-ips.txt` file
 - ✅ Data source for latest Amazon Linux 2023 AMI
 
-## 📁 Project Structureterraform-sohag/
+## 📁 Project Structure terraform/
 │
 ├── main.tf
 ├── backend.tf
@@ -41,12 +41,10 @@
 Terraform >= 1.7.5
 
 AWS CLI installed and configured
-
 AWS credentials with full access (for testing in Learner Lab)
 
 🧾 Outputs
 A file named all-ips.txt will be generated automatically with the public IPs of the EC2 instances in this format:
-
 cpp
 Copy
 Edit
@@ -55,7 +53,6 @@ public-ip2 18.210.x.x
 
 📡 EC2 Public Output Example
 Each public EC2 instance installs Apache and serves this HTML:
-
 rust
 Copy
 Edit
@@ -63,16 +60,15 @@ Hi, I'M Muhammad Diab... EC2 Public 1 is Working
 
 📌 How to Use
 Clone the repo
-
 Create your keyy.pem key and upload it
-
 Run:
-
 bash
 Copy
 Edit
 terraform init
 terraform apply
+
+
 👨‍💻 Author
 Muhammad Diab
 Track: System Administration @ ITI – Sohag
