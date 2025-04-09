@@ -24,9 +24,7 @@
 - [🚀 Getting Started](#-getting-started)
 - [📁 Project Structure](#-project-structure)
 - [🔧 Key Variables](#-key-variables)
-- [🧠 Future Improvements](#-future-improvements)
 - [🧑‍💻 Author](#-author)
-
 
 ---
 
@@ -49,8 +47,36 @@ This project uses **Terraform** to provision a complete cloud infrastructure on 
 ## ⚙️ Requirements
 
 | Tool         | Recommended Version |
-|--------------|---------------------
+|--------------|---------------------|
+| Terraform    | >= 1.5              |
+| AWS CLI      | >= 2.0              |
+| Linux/macOS  | Preferred           |
+| AWS Account  | Required            |
 
+---
+
+## 🚀 Getting Started
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/your-username/project-name.git
+cd project-name
+
+# 2. Initialize Terraform
+terraform init
+
+# 3. Preview the execution plan
+terraform plan
+
+# 4. Apply the configuration
+terraform apply
+```
+
+---
+
+## 📁 Project Structure
+
+```bash
 .
 ├── main.tf
 ├── variables.tf
@@ -62,17 +88,27 @@ This project uses **Terraform** to provision a complete cloud infrastructure on 
 │   ├── ec2-private-m/
 │   └── alb/
 └── all-ips.txt
+```
 
-🔧 Key Variables
-Variable	Description
-vpc_cidr	CIDR block for the main VPC
-public_subnets	List of public subnets
-private_subnets	List of private subnets
-instance_type	Type of EC2 instances
-key_name	
+---
+
+## 🔧 Key Variables
+
+| Variable         | Description                        |
+|------------------|------------------------------------|
+| `vpc_cidr`       | CIDR block for the main VPC        |
+| `public_subnets` | List of public subnets             |
+| `private_subnets`| List of private subnets            |
+| `instance_type`  | Type of EC2 instances              |
+| `key_name`       | SSH key name for instance access   |
+
+---
 
 
-🧑‍💻 Author
-Muhammad Diab
+## 🧑‍💻 Author
 
-GitHub: @mu7adiab
+- **’Muhammad Diab**
+- GitHub: [@mu7adiab](https://github.com/mu7adiab))
+
+---
+
